@@ -20,6 +20,12 @@ import { Component, Input, OnInit } from '@angular/core';
           <li>
             <a [routerLink]="['/get-started']" [routerLinkActive]="['active']" ariaCurrentWhenActive="page">Getting started</a>
           </li>
+          <li>
+            <a [routerLink]="['/admin/users']" [routerLinkActive]="['active']" ariaCurrentWhenActive="page">Users</a>
+          </li>
+          <li>
+            <a [routerLink]="['/admin/posts']" [routerLinkActive]="['active']" ariaCurrentWhenActive="page">Posts</a>
+          </li>
         </ul>
       </nav>
         <mat-icon fontIcon="person"></mat-icon>

@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, title: 'Home page'},
   { path: 'get-started', component: GetStartedComponent, title: 'Get started page' },
+  // Lazy loading:  module indépendant, chargé que si besoin
+  { path: 'admin', loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule)},
   // always at the end
   { path: '**', component: NotFoundComponent, title: 'Not found page' }
 ];
