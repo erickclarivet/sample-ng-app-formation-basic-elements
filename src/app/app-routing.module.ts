@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GetStartedComponent } from './components/pages/get-started/get-started.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 
 const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'get-started', component: GetStartedComponent },
-  { path: '',
-    redirectTo: '/get-started',
-    pathMatch: 'full'
-  },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
