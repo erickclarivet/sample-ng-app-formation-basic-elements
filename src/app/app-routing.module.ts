@@ -6,10 +6,10 @@ import { NotFoundComponent } from './components/pages/not-found/not-found.compon
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'get-started', component: GetStartedComponent },
+  { path: 'home', component: HomeComponent, title: 'Home page'},
+  { path: 'get-started', component: GetStartedComponent, title: 'Get started page' },
   // always at the end
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent, title: 'Not found page' }
 ];
 
 @NgModule({
