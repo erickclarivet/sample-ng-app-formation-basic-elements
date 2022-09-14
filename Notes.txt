@@ -191,5 +191,13 @@ complete()
 }
 Cet observer est subscribed par un observable en s'abonnant.
 
+Pour la doc auto : 
+
+https://compodoc.app/guides/installation.html
+
+TODO :
+faire output + viewchild avec les posts
+ajouter tests + gestion d'erreur
+
 
 
