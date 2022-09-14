@@ -6,9 +6,8 @@ import { UsersComponent } from './components/pages/users/users.component';
 import { PostsComponent } from './components/pages/posts/posts.component';
 import { UserFormComponent } from './components/pages/user-form/user-form.component';
 import { UserListComponent } from './components/pages/user-list/user-list.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { UIModule } from 'src/app/ui.module';
 import { UserCardComponent } from './components/pages/user-card/user-card.component';
+import { SharedModule } from 'src/app/shared.module';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { UserCardComponent } from './components/pages/user-card/user-card.compon
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ReactiveFormsModule,
-    UIModule
+    SharedModule
   ]
 })
 export class AdminModule { }

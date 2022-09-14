@@ -13,16 +13,34 @@ export class AuthService {
   private loggedInSubject = new BehaviorSubject(false);
   public loggedInObservable = this.loggedInSubject.asObservable();
 
-  constructor() { }
+  constructor() {
+    this.loadSession();
+  }
 
   login(credentials : Credentials) : void {
     console.log('Login with :', credentials);
+    this.startSession();
     this.loggedInSubject.next(true);
+  }
+
+  loadSession(): void {
+    if(localStorage.getItem('authToken')) {
+      this.loggedInSubject.next(true);
+    }
+  }
+
+  private startSession() {
+    localStorage.setItem("authToken", "fake");
   }
 
   logout() : void {
     console.log('Logout');
+    this.stopSession();
     this.loggedInSubject.next(false);
+  }
+
+  private stopSession() {
+    localStorage.removeItem("authToken");
   }
 
   isLoggedIn() : boolean {

@@ -10,9 +10,9 @@ import { HeaderComponent } from './components/layout/header.component';
 import { GetStartedComponent } from './components/pages/get-started/get-started.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
-import { UIModule } from './ui.module';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,8 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    UIModule,
-    ReactiveFormsModule,
+    SharedModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

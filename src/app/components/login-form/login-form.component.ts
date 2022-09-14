@@ -22,7 +22,8 @@ export class LoginFormComponent implements OnInit {
 
   login() : void {
     this.authService.login(this.loginForm.value as Credentials)
-    console.log(this.loginForm.controls['email'].value)
+    console.log(this.loginForm.controls['email'].value);
+
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user-service.service';
 import { User } from '../../../models/user';
 
@@ -22,9 +22,11 @@ export class UserFormComponent implements OnInit {
     // to do : add to usersService
   }
 
-  submit() : void {
-    console.log(this.userForm.value);
-    this.userService.addUser(this.userForm.value as User);
+  submit(formDirective: FormGroupDirective) : void { //wtf ? obligé de passer par une variable template
+    const newUser = this.userForm.value;
+    this.userService.addUser(newUser as User);
+    this.userForm.reset();
+    formDirective.resetForm();
   }
 
 }

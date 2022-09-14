@@ -1,0 +1,195 @@
+SPA : Angular c'est du single page, tournant autour des components.
+Utiliser Angular ou autre ? pk ? angular plus d'outil, moins de complexité mais plus lourd ? car react est une librairy non un framework v
+Utilisation de Any mauvaise pratique ? car non vraiment typée. => a banir sauf si serveur envoie des reponses différents/modulables v
+portée d'import des components ? v
+Material Plusieur couleur ? v
+conseil de plugin ? v
+Output event en Angular ? v
+^ ? ~ ? c'est quoi ? v
+Cas d'utilisation BehaviourSubject ? v
+storage ? local storage ? v
+NgRx ? Redux ? gestion des state ? => pour du specifique, mais pas souvent utilisé
+try catch ?
+différence promise et observable ? promise un seul retour alors que observable plusieurs retour, c'est un flux
+Angular et JWT ?
+
+
+https://drive.google.com/file/d/1vK9goyHwNZUMQlRTnQLMjDXW9uQh7BSx/view
+https://drive.google.com/drive/folders/0B4pfaE87hEuhQVV4ci0xMVhsUjg?resourcekey=0-j2yptWehR12a-GPYjGab2w
+
+https://kangax.github.io/compat-table/es6/ : voir compatibilité nav + fonctionnalités JS
+
+example de cours sur git : https://github.com/bngams/js-syntax-basics
+
+spread operators : (mafunc(...tab))
+ex : eclate un élément ex tab en 3 variable pour une fonction par ex => tester avec object
+
+rest parameters :
+définir qu'une fonction aura un nombre indéfini d'arg func mafunc(...args)
+
+ancienne version de js (avant es6)
+utilisation de class pas possible mais création d'un objet à la main et utilisation de protype pour function similaire (ex toString)
+Now c'est par defaut avec des classes
+
+Linter/Lint : correcteur orthographique (ex : age : number = 10 => number sert à rien donc il va warning)
+
+typescript est une surcouche à js, à la compilation il transforme en js
+
+tsconfig.json : propriété de compilation du typescript
+
+En typescript, préférer interface à class si juste stock propriété, car interface non compilé et interprété, aucunes empreinte memoire dessus.
+
+overview typescript : https://www.typescriptlang.org/docs/handbook/intro.html
+
+concept importants angular : https://angular.io/guide/architecture
+
+ng g c components/Header --skip-tests --inline-template --inline-style : pour créer un component en inline (css et html dans le component)
+
+ng g c components --dry-run : pour montrer ce que ca va faire mais sans le faire
+
+A la compilation, tous les fichiers sont mis dans un repertoire dist, remplacé par un index.html, du js et de l'ajax
+
+webcomponent : ses propres composants html dynamiques
+
+grace au package.json on peut lancer le front et le server temporaire (ex : json-server)
+
+utiliser 'startUML' pour UML
+
+Comment gérer les events en Angular ?
+
+live reload : recompile le projet dès qu'il y a une modif.
+
+@Component {} dans angular est un décorateur (son role est d'intervenir à plusieurs endroits pour insérer du code) => comme les annotations
+
+https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg?hl=fr : savoir la techno d'une page
+
+stackshare.io : savoir sur app connu les outils frameworks utilisé
+
+npmjs pour trouver des packages pour dev (video ou audio)
+
+Avantage de React :
+!!!!! React utilise le virtual dom et non angular. cad, react crée un dom virtuel et si il y a modif avec le normal, regarde les diff et remplace que la valeur et non toute la balise comme le font
+les autre framework : https://blog.logrocket.com/what-virtual-dom-react/
+De base intéragir avec le dom est lourd pour le nav et react à l'avantage dessus.
+
+Component inline : Quand le HTML/CSS est dans l'annotation @Component et non dans des fichiers associés
+
+pollifils: libraries pour la retro compatibilité
+
+editorconfig : fichier qui reference comment est géré l'editeur (ex : si on fait tabulation il y aura 2 espaces)
+
+interpollation : utilisation de {{ title }} dans le html
+
+custom pipe :
+générer un pipe : ng g p pipes/ExponentialStrength --skip-tests (pour ng generate pipe)
+
+BONNE PRATIQUE : Commentaire expliquant son utilisation en haut d'un pipe
+
+Property binding : [src]="imageUrl" : bind valeur balise et propriété component
+Event binding : dans html (click)="funcInComponent()" qui appelle la methode dans le component
+[] = property binding, cad si valeur change dans component, change dans view
+() = event binding, cad si event (ex : click) dans view, appel methode de component
+
+two way binding : [(ngModel)] => [] = property binding et () = event binding donc c'est géré dans les deux sens
+
+Directives :
+ngIf, ngClass
+ngClass = si condition respectée utilise un class ou une autre
+si on utilise une directive, par ex ng-class, dans le nav, angular ajoutera 'ng-reflect-ng-class' qui est ajouté par le shadow dom
+Shadow DOM : une copie du dom, pour limiter la portée des var css, rend la balise unique car de base les elements/tags sont généraux
+ngClass + css class : ne modifie pas le dom réel
+ng-container : object du dom qui affichera ou non le code
+ng-template : element fantome, de angular qui n'est pas dans le dom
+
+#myVariable : template variable
+On peut meme faire ca sur une vrai balise, ex: <h2 #myVar>
+si on fait <p>{{#myVar.innerText}}</p> va afficher 
+
+angular devtool (successeur de anguri) : https://angular.io/guide/devtools
+
+Pour les frameworks de style :
+- NgBootStrap et non BootStrap (not good) car il ne fonctionne qu'avec des page 'statique', angular met d'abord <app-component> dans le html sans avoir le temps d'afficher
+son affichage dynamiquement mais pour BS, la page et prête et il va appliquer son style => ca ne marche pas car il faudrait bidouiller
+ngBootStrap : lui fait la passerelle et permet de travailler après que l'affichage du contenu dynamique du app-component soit affiché avant de se lancer.
+Problème ngBootStrap ne suit pas vraiment les version d'angular.
+- NgMaterial suit les version d'angular
+Permet d'utiliser des cdk qui impose très peut de style afin d'utiliser les avantages de material sur son propre style si on en a déjà un.
+Suit les convention MATERIAL DESIGN GUIDELINES.
+MAJ simple
+Pas très fourni
+- PrimeNg : Si on veut des designs variés
+Si pas de grandes attente en terme de DESIGN GUIDELINES et si on veut beaucoup d'éléments go prendre
+Suit les maj angular
+
+A ajouté en complément, un utilitaire css : tailwind
+lib de complément d'éléments css, class, syntaxe, helpers on utilise
+Sur PrimeNg, il contient maintenant un utilitaire css !!
+
+SCHEMATIC : toutes les fonctionnalités d'une api
+
+Utilisation de @Input() dans un composant permet d'ajouter un parametre au selector appelé
+ex :   @Input()
+  title!: string; (! dit qu'on est pas obligé de l'initialiser)
+et dans le parent il faut envoyé un parametre title au selector fils (
+
+Guards : canActivate d'un element du tableau de root
+
+UIModule ou MaterialModule est un library module car n'export que des elements de lib
+
+ng g m modules/Admin --routing : pour créer des roots avec
+
+Lazy loading : 
+- en terme de sécurité car non accessible
+- evite de loader des éléments qu'on utilise pas
+lazyloading de module :
+on voit les fichier à part dans la compilation : "Lazy Chunk Files"
+
+Preloading strategy : une stratégie de preloading, pré charger un module
+
+@Injectable : anotation pour récupérer l'injection de dépendance
+dedans on a 'providedIn:root' : à quels endroits on sauvegarde les dépendance, ici root => singleton
+Utiliser providers dans un seul component, on le load pas dans module mais que dans le component associé => transien
+
+ng g c components/loginForm --skip-tests --m=app : --m=app, c'est pour que le component comprenne qu'il doit s'attacher au module app
+
+'"skipTests": true' : dans la section '"@schematics/angular:component": {' d'angular.json pour ne pas avoir les tests généré lors d'un ng g
+
+Template Driven form : se base sur les templates, directives, property et event binding + ngModel pour gérer les éléments d'un formulaire.
+Simple d'utilisation, mais si on veut faire du spécifique
+dans le html sur le form #form="ngForm" pour que sur le bouton on [disabled]="!form.valid", pour bloquer la validation
+required dans les inputs pour ne pas accepté que ca soit vide ou mal rempli.
+Chaque input a une class ng ajouté dans le html afin de savoir s'il est en erreur (ng-error), non touché (ng-untouched)
+Problème, on a pas vraiment accès aux elements du form depuis le components.
+Reactive form :
+On utilise FormControl afin d'intéragir avec les input du form
+A savoir, de base, pour chaque input, angular crée un FormControl (permettant par exemple d'atteindre les éléments depuis le component)
+
+localStorage ou sessionStorage : pour stocker token de session => préférer cookies
+Dans package.json :
+^ au moins laversion mais compatible
+~ au moins la version mais pas toujours compatible
+
+Utilisation de @Output + event pour appeler une methode du component parent si le form est validé dans le fils.
+Depuis le parent, on peut atteindre un component fils grace à @ViewChild('{{nomduselector}})
+et récup avec la methode ngOnViewInit() car on utilise @viewChild
+
+service vs viewchild : 
+ViewChild : si on partage qu'entre l'enfant et parent.
+Service : Si on s'en sert un peut partout.
+
+https://rxjs.dev/guide/overview : bien fait
+https://rxjs.dev/guide/observer
+
+Pour call server on use httpclient :
+HttpClientModule doit être importé après le browserModule
+
+observer est return d'un appel http :
+observer {
+next(),
+error(),
+complete()
+}
+Cet observer est subscribed par un observable en s'abonnant.
+
+
+
