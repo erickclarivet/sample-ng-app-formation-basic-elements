@@ -206,6 +206,7 @@ Attention en devops : pas de nav donc il faudrait faire un config 'Headless'!!!!
 
 Devops :
 https://indepth.dev/posts/1374/craft-a-complete-angular-gitlab-pipeline
+https://www.thinktecture.com/en/angular/e2e-tests-with-cypress-and-angular/
 
 TODO :
 faire output + viewchild avec les posts
