@@ -16,6 +16,8 @@ Angular et JWT ?
 
 https://drive.google.com/file/d/1vK9goyHwNZUMQlRTnQLMjDXW9uQh7BSx/view
 https://drive.google.com/drive/folders/0B4pfaE87hEuhQVV4ci0xMVhsUjg?resourcekey=0-j2yptWehR12a-GPYjGab2w
+rxjs (bien expliqué):
+https://docs.google.com/document/d/1IOwHJoFYsWGQfjCbXsj3bpiXllDNCY5rtx-ELGtYPAk/edit
 
 https://kangax.github.io/compat-table/es6/ : voir compatibilité nav + fonctionnalités JS
 
@@ -105,7 +107,7 @@ ng-template : element fantome, de angular qui n'est pas dans le dom
 On peut meme faire ca sur une vrai balise, ex: <h2 #myVar>
 si on fait <p>{{#myVar.innerText}}</p> va afficher 
 
-angular devtool (successeur de anguri) : https://angular.io/guide/devtools
+Pour debug !! Utiliser angular devtool (successeur de anguri) : https://angular.io/guide/devtools
 
 Pour les frameworks de style :
 - NgBootStrap et non BootStrap (not good) car il ne fonctionne qu'avec des page 'statique', angular met d'abord <app-component> dans le html sans avoir le temps d'afficher
@@ -195,9 +197,10 @@ Pour la doc auto :
 
 https://compodoc.app/guides/installation.html
 
+E2E : end to end, de bout en bout.
+
 TODO :
 faire output + viewchild avec les posts
 ajouter tests + gestion d'erreur
-
 
 
