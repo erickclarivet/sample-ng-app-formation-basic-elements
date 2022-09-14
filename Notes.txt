@@ -194,10 +194,13 @@ complete()
 Cet observer est subscribed par un observable en s'abonnant.
 
 Pour la doc auto : 
-
 https://compodoc.app/guides/installation.html
 
+TESTS :
 E2E : end to end, de bout en bout.
+Protractor de base, mais vieux
+Voir cypress (https://www.cypress.io/) un peu plus récent, ou puppeteer (pptr.dev)
+Attention en devops : pas de nav donc il faudrait faire un config 'Headless'!!!!
 
 TODO :
 faire output + viewchild avec les posts
