@@ -13,11 +13,13 @@ try catch ?
 différence promise et observable ? promise un seul retour alors que observable plusieurs retour, c'est un flux
 Angular et JWT ?
 
-
+RESSOURCES :
 https://drive.google.com/file/d/1vK9goyHwNZUMQlRTnQLMjDXW9uQh7BSx/view
 https://drive.google.com/drive/folders/0B4pfaE87hEuhQVV4ci0xMVhsUjg?resourcekey=0-j2yptWehR12a-GPYjGab2w
 rxjs (bien expliqué):
 https://docs.google.com/document/d/1IOwHJoFYsWGQfjCbXsj3bpiXllDNCY5rtx-ELGtYPAk/edit
+https://docs.google.com/document/d/1jUYxybmJgd8rFUs7otCLnLhucNd4zWBk0bdK0z7WbZ8/edit
+
 
 https://kangax.github.io/compat-table/es6/ : voir compatibilité nav + fonctionnalités JS
 
@@ -201,6 +203,9 @@ E2E : end to end, de bout en bout.
 Protractor de base, mais vieux
 Voir cypress (https://www.cypress.io/) un peu plus récent, ou puppeteer (pptr.dev)
 Attention en devops : pas de nav donc il faudrait faire un config 'Headless'!!!!
+
+Devops :
+https://indepth.dev/posts/1374/craft-a-complete-angular-gitlab-pipeline
 
 TODO :
 faire output + viewchild avec les posts
