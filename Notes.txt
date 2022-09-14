@@ -53,7 +53,7 @@ webcomponent : ses propres composants html dynamiques
 
 grace au package.json on peut lancer le front et le server temporaire (ex : json-server)
 
-utiliser 'startUML' pour UML
+utiliser 'startUML' pour UML !!!!!!
 
 Comment gérer les events en Angular ?
 
