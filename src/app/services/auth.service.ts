@@ -1,25 +1,32 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+
+export interface Credentials {
+  email : string;
+  pwd : string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  loggedIn = false;
+  private loggedInSubject = new BehaviorSubject(false);
+  public loggedInObservable = this.loggedInSubject.asObservable();
 
   constructor() { }
 
-  login() : void {
-    console.log('Login');
-    this.loggedIn = true;
+  login(credentials : Credentials) : void {
+    console.log('Login with :', credentials);
+    this.loggedInSubject.next(true);
   }
 
   logout() : void {
     console.log('Logout');
-    this.loggedIn = false;
+    this.loggedInSubject.next(false);
   }
 
   isLoggedIn() : boolean {
-    return this.loggedIn;
+    return this.loggedInSubject.value;
   }
 
   hasPermission(perm : string) : boolean {
