@@ -1,0 +1,110 @@
+Session ANGULAR AELION du 12/09/22
+
+Présentation / Slides Angular
+https://drive.google.com/file/d/1vK9goyHwNZUMQlRTnQLMjDXW9uQh7BSx/view?usp=sharing
+
+Ecosystème JS
+ES6 et +
+Fonctionnalités / compatibilité
+https://kangax.github.io/compat-table/es2016plus/
+Syntaxes de bases
+https://github.com/bngams/js-syntax-basics/tree/master/2-js-basics-code-syntax
+
+Typescript
+http://typescriptlang.org/
+SPA
+Web components
+Exemple de SPA from scratch (vanilla js)
+https://github.com/bngams/sample-es6app-asys
+CSS
+Flex
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://flexboxfroggy.com/#fr
+
+Angular
+Versions de Angular 
+Rythme de release, LTS
+https://angular.io/guide/releases
+Releases
+https://github.com/angular/angular/releases
+Angular update
+https://update.angular.io/?v=11.0-12.0
+Utiliser le mode Medium ou Avancé (si besoin de voir toutes les étapes)
+/!\ librairies tierces
+Angular CLI
+Extensions VSCode (Linting, etc..)
+Extensions chrome
+Angular dev tools
+https://angular.io/guide/devtools
+https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh/related
+
+
+
+
+Workspace Angular 
+Description de base des fichiers d’un workspace:
+https://angular.io/guide/file-structure
+Librairies de composants (librairies IHM/GUI)
+https://ng-bootstrap.github.io/#/getting-started
+https://www.primefaces.org/primeng/
+https://material.angular.io/
+Découpage / utilisation des modules
+Modules https://docs.google.com/document/d/1tk7cQGWc0UVOcn8SLHY36QMC6oohtqcjQReEo05oVhc/edit?usp=drive_web&ouid=105060048222471999454
+Lazy loading https://docs.google.com/document/d/1SAIftq76t8m9oBi6G6zy5GmMAkfo0XffBAQjhh2UPUU/edit#
+Routing
+https://angular.io/guide/routing-overview
+Guards:
+
+
+Lifecycle hooks
+https://angular.io/guide/lifecycle-hooks
+Components interactions / communication
+Synthèse: https://angular.io/guide/component-interaction
+@Input() / @Output()
+https://angular.io/guide/inputs-outputs
+@ViewChild / @ViewChildren
+ViewChild: https://angular.io/api/core/ViewChild
+@Injectable
+DI
+https://angular.io/guide/dependency-injection
+https://angular.io/guide/dependency-injection-providers
+BehaviorSubject…
+https://www.tektutorialshub.com/angular/angular-subject-example/
+Formulaires
+Template driven / Reactive forms
+https://angular.io/guide/forms-overview
+
+
+Communication HTTP
+Aspect asynchrone: Promises, Observables (RxJS)
+https://rxjs.dev/guide/
+Classes HttpClient de Angular
+Pipe async ( products$ | async)
+https://www.younup.fr/blog/decouverte-pipe-async-angular
+Aller plus loin
+Intercepteurs
+https://docs.google.com/document/d/1v2u8T2xS586W_WtJuakUu7KRDOfi17rpdoTPIct5O9I/edit#
+RxJS
+Service générique pour traiter des ressources RESTful 
+https://github.com/bngams/ng-app-sample-byg/blob/master/src/app/utils/services/resource.service.ts
+…
+Outils, tests…
+Tests: 
+Projet démo
+https://github.com/bngams/sample-ng-app-0121-gfi
+Par défaut les tests unitaires sont faits avec: 
+Jasmine https://jasmine.github.io/ (librairie assertion)
+Karma  https://angular.io/guide/testing (test runner)
+Angular testing https://angular.io/guide/testing-components-basics
+/!\ mode headless
+On peut en plus des tests unitaires réaliser des tests E2E
+Selenium, Cypress….
+Notes sur les tests Angular
+https://docs.google.com/document/d/1Hf9L-_SsY9Z0miUg6qA2Hb76FZpTcaLbVRMCwemXUgQ/edit#
+Articles
+Test Angular Gitlab
+https://indepth.dev/posts/1374/craft-a-complete-angular-gitlab-pipeline
+Tests E2E Cypress Angular
+https://www.thinktecture.com/en/angular/e2e-tests-with-cypress-and-angular/
+JSDOC Documentation : https://compodoc.app/guides/getting-started.html
+
